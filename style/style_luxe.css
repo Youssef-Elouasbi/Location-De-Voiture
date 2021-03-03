@@ -1,0 +1,491 @@
+body{
+    background-color: black;
+    color: white;
+}
+header{
+    height: 12vh;
+}
+#menu_website li a{
+    color: white;
+}
+#menu_website li a::after, .mobile-menu ul li a::after{
+    position: absolute;
+    content: '';
+    /* border-bottom: 3px solid #C52519 ; */
+    border-bottom: 3px solid #f1516c ;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    transition: 400ms ease;
+}
+#burger{
+    color: white;
+    
+}
+.btnUp{
+    background-color:#f1516c;
+    color: white;/*2f2f47*/
+    border: 1px solid #f1516c;
+}
+.btnUp:hover{
+    color: #f1516c;
+}
+footer{
+    border-top: 6px solid #f1516c;
+}
+/*bannerLuxe section*/
+.banner_luxe{
+    /* background-color: #0e1d42; */
+    background-color: #2f2f47;/*3a3a55*/
+    height: 45vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+.bannerLuxe_text{
+    text-align: center;
+    align-self: center;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    width: 85%;
+    margin: auto;
+}
+.text h1{
+    font-size: 50px;
+}
+.text p{
+    font-size: 19px;
+}
+.imgLuxe{
+    width: 100%;
+    height: 100%;
+}
+.imgLuxe img{
+    width: 100%;
+    height: 100%;
+}
+/*luxe car section*/
+.titleCar{
+    text-align: center;
+    margin: 20px auto 35px auto;
+    border-bottom: 4px solid #f1516c;
+    width: 25%;
+    border-radius: 15px;
+}
+/* .containerCard{
+    width: 90%;
+    height: 35vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+} */
+.containerCard{
+    width: 90%;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+.sectionOne{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.sectionTwo{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.card1, .card2, .card3, .card4{
+    text-align: center;
+    position: relative;
+    width: 21%;
+    height: 90%;
+    border-radius: 20px;
+    /* border: 1px solid white; */
+    box-shadow: grey 0px 5px 45px;
+    overflow: hidden;
+}
+.card1{
+    grid-area: card1;
+    opacity: 0;
+    animation: cardAnimation 2s forwards;
+    animation-delay: 1s;
+}
+.card2{
+    grid-area: card2;
+    opacity: 0;
+    animation: cardAnimation 2s forwards;
+    animation-delay: 1s;
+}
+.card3{
+    grid-area: card3;
+    opacity: 0;
+    animation: cardAnimation2 2500ms forwards;
+}
+.card4{
+    grid-area: card4;
+    opacity: 0;
+    animation: cardAnimation2 2500ms forwards;
+}
+.card1::before, .card2::before, .card3::before, .card4::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    background-color: #2f2f47;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(120px at 80% 20%);
+    transition: 700ms ;
+
+}
+.card1 img,.card2 img{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    /* width: 230px; */
+    width: 100%;
+    margin: auto;
+    z-index: 10000;
+    transition: 0.7s;
+}
+.card3 img{
+    position: absolute;
+    /* top: 25%; */
+    top: 15%;
+    left: 0%;
+    /* width: 230px; */
+    width: 100%;
+    margin: auto;
+    z-index: 10000;
+    transition: 0.7s;
+}
+.card4 img{
+    position: absolute;
+    /* top: 20%; */
+    top: 5%;
+    left: 0%;
+    /* width: 230px; */
+    width: 110%;
+    margin: auto;
+    z-index: 10000;
+    transition: 0.7s;
+}
+.card1 h1, .card2 h1, .card3 h1, .card4 h1{
+    text-align: center;
+    position: absolute;
+    bottom: 15%;
+    width: 100%;
+    transition: 700ms;
+}
+.contentText{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transition: 700ms;
+    animation: cardMoveUp 700ms forwards;
+}
+.removeDisplay{
+    display: none;
+}
+.card1 p, .card2 p, .card3 p, .card4 p{
+    font-weight: bold;
+    font-size: 18px;
+}
+.card1 button, .card2 button, .card3 button, .card4 button{
+    background-color: #2f2f47;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    width: 48%;
+    /* cursor: pointer; */
+    transition: 700ms ease;
+}
+.card1 button a, .card2 button a, .card3 button a, .card4 button a{
+    color: white;
+    text-decoration: none;
+
+}
+.card2:hover img, .card3:hover img, .card4:hover img{
+    transform: translateY(-40px);
+}
+.card1:hover img{
+    transform: translateY(-17px);
+}
+.card1:hover::before, .card2:hover::before, .card3:hover::before, .card4:hover::before{
+    clip-path: circle(150px at 75% 25%);
+}
+.card1:hover h1, .card2:hover h1, .card3:hover h1, .card4:hover h1{
+    transform: translateY(-40px);
+}
+.card1 button:hover, .card2 button:hover, .card3 button:hover, .card4 button:hover{
+    background-color: white;
+}
+.card1 button:hover a, .card2 button:hover a, .card3 button:hover a, .card4 button:hover a{
+    Color: #2f2f47;
+}
+
+/*Payement section*/
+.titlePay{
+    text-align: center;
+    margin: 30px auto 35px auto;
+    border-bottom: 4px solid #f1516c;
+    width: 28%;
+    border-radius: 15px;
+}
+.containerPay{
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.master, .visa, .cash{
+    width: 33%;
+}
+.master i, .visa i, .cash i{
+    font-size: 120px;
+    color: rgb(220, 220, 220);
+    transition: 700ms ease;
+}
+.master:hover i{
+    color: #f1516c;
+}
+.visa:hover i{
+    color: #f1516c;
+}
+.cash:hover i{
+    color: #f1516c;
+}
+
+
+/*responsive*/
+
+@media(max-height: 769px){
+    .containerCard{
+        width: 90%;
+        height: 82vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+    }
+}
+@media(max-width: 1024px) and (min-height: 769px){
+    .banner_luxe{
+        height: 35vh;
+    }
+    .text h1{
+        font-size: 42px;
+    }
+    .text p{
+        font-size: 17px;
+    }
+    .titleCar{
+        width: 31%;
+    }
+    .containerCard{
+        height: 50vh;
+    }
+    .card1, .card2, .card3, .card4{
+        height: 95%;
+        width: 25%;
+    }
+    .card1::before, .card2::before, .card3::before, .card4::before{
+        clip-path: circle(100px at 80% 20%);
+    }
+    .card1:hover::before, .card2:hover::before, .card3:hover::before, .card4:hover::before{
+        clip-path: circle(110px at 75% 25%);
+    }    
+    .card1 h1, .card2 h1, .card3 h1, .card4 h1{
+        font-size: 28px;
+    }
+    .titlePay{
+        width: 35%;
+    }
+}
+@media(max-width: 943px){
+    /* .containerCard{
+        height: 50vh; 
+        display: grid;
+        grid-template-areas: "card1 card2"
+                            "card3 card4";
+        justify-content: center;
+        align-items: center;
+    }
+    .card1, .card2, .card3, .card4{
+        text-align: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: grey 0px 5px 45px;
+        overflow: hidden;
+    } */
+    
+    
+
+}
+@media(max-width: 834px){
+    .titleCar{
+        width: 38%;
+    }
+    .containerCard{
+        height: 60vh;
+    }
+    .card1, .card2, .card3, .card4{
+        height: 95%;
+        width: 30%;
+    }
+    .titlePay{
+        width: 42%;
+    }
+}
+@media(max-width: 664px){
+    .titleCar{
+        width: 48%;
+    }
+    .containerCard{
+        height: 70vh;
+    }
+    .card1, .card2, .card3, .card4{
+        height: 95%;
+        width: 35%;
+    }
+    .titlePay{
+        width: 54%;
+    }
+    .containerPay{
+        flex-direction: column;
+    }
+    .master, .visa, .cash{
+        width: 90%;
+    }
+    .master i, .visa i, .cash i{
+        font-size: 135px;
+    }
+}
+@media(max-width: 547px){
+    .banner_luxe{
+        height: 55vh;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .text h1{
+        font-size: 35px;
+    }
+    .text p{
+        font-size: 16px;
+    }
+    .imgLuxe{
+        height: 60%;
+    }
+    .titleCar{
+        width: 59%;
+    }
+    .containerCard{
+        height: 75vh;
+    }
+    .card1, .card2, .card3, .card4{
+        height: 95%;
+        width: 45%;
+    }
+    .titlePay{
+        width: 65%;
+    }
+}
+@media(max-width: 414px){
+    .text h1{
+        font-size: 28px;
+    }
+    .text p{
+        font-size: 14px;
+    }
+    .titleCar{
+        width: 77%;
+    }
+    .containerCard{
+        height: 60vh;
+    }
+    .card1, .card2, .card3, .card4{
+        height: 95%;
+        width: 45%;
+    }
+    .card1 h1, .card2 h1, .card3 h1, .card4 h1{
+        font-size: 27px;
+    }
+    .titlePay{
+        width: 89%;
+    }
+}
+@media(max-width: 375px){
+    .text h1{
+        font-size: 24px;
+    }
+    .text p{
+        font-size: 13px;
+    }
+    .titleCar{
+        width: 86%;
+    }
+    .card1 h1, .card2 h1, .card3 h1, .card4 h1{
+        font-size: 25px;
+    }
+    
+}
+
+
+@keyframes cardMoveUp{
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100%{
+        opacity: 100;
+        transform: translateY(-25px);
+    }
+}
+
+@keyframes cardAnimation{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 100;
+        transform: translateY(0px);
+    }
+}
+@keyframes cardAnimation2{
+    0%{
+        opacity: 0;
+        transform: translateY(-354px);
+    }
+    40%{
+        opacity: 50;
+    }
+    100%{
+        opacity: 100;
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style_inscription.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <title>Inscription</title>
+    <link rel="icon" href="images/logo/icon_website.png">
+</head>
+<body>
+    <main class="main_contact">
+        <img src="images/image/renault2.jpg" alt="">
+        <h1 class="go_home"><a href="index.html"><i class="fas fa-home"></i></a></h1>
+        <div class="form" onsubmit="return doSub()">
+            <div class="form_title">
+                <h1>
+                    <i class="fas fa-user-plus"></i>
+                    <!-- Message Was Sent <i class="fas fa-smile-beam"></i> -->
+                </h1>
+            </div>
+            <form action="" onsubmit="">
+                <input id="textName" type="text" placeholder="Nom" pattern="[a-zA-Z]{4,}" required>
+                <input id="textLastName" type="text" placeholder="Prenom" pattern="[a-zA-Z]{4,}" required>
+                <input id="textTel" type="tel" placeholder="Entrez votre numéro de téléphone: 12-345-678" pattern="[0-9]{2}-[0-9]{3}-[0-9]{3}" required>
+                <input id="textEmail" type="email" placeholder="Email" required>
+                <input id="textPass" type="password" placeholder="Entrer le mot de passe" required>
+                <input id="textPass2" type="password" placeholder="Entrez à nouveau le mot de passe" required>
+                <p class="textError remove"><i class="fas fa-exclamation-circle"></i> Entrez le même mot de passe que le premier</p>
+                <div class="radio">
+                    <input id="male" type="radio" value="male" name="sexe" checked>
+                    <label for="male">Homme</label>
+                    <input id="female" type="radio" value="female" name="sexe">
+                    <label for="female">Femme</label>
+                </div>
+                <button>S'inscrire</button>
+                <p>j'ai déjà un compte? <a href="Authentication.html">se connecter</a></p>
+            </form>
+        </div>
+    </main>
+    <script src="js/app.js"></script>
+    <script src="js/app_inscription.js"></script>
+</body>
+</html>

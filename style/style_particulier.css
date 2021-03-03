@@ -1,0 +1,185 @@
+header{
+    height: 12vh;
+}
+/*top page*/
+.top_page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 34vh;
+    background-color: orange;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.top_page h1{
+    padding-bottom: 7px;
+}
+.top_page p{
+    font-size: 18px;
+    width: 90%;
+    margin-bottom: 70px;
+}
+.top_page::after{
+    content: '';
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    height: 28%;
+    bottom: 0;
+    left: 0;
+    clip-path: ellipse(52% 100% at 50% 80px);
+}
+
+/*Pourquoi Nous*/
+
+.title1_particulier{
+    text-align: center;
+    margin: auto;
+    border-bottom: 4px solid #C52519;
+    width: 18%;
+    border-radius: 15px;
+}
+.content{
+    text-align: center;
+    margin: auto;
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+    align-items: center;
+}
+.content1, .content2, .content3{
+    width: 33%;
+}
+
+.content1 h1, .content2 h1, .content3 h1{
+    font-size: 80px;
+    color: brown;
+}
+.content1 p, .content2 p, .content3 p{
+    font-size: 20px;
+}
+.second_section{
+    margin-bottom: 50px;
+}
+.second_content{
+    text-align: center;
+    margin: auto;
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+    align-items: center;
+}
+
+.second_section .content1, .second_section .content2, .second_section .content3{
+    width: 33%;
+}
+
+.second_section .content1 h1, .second_section .content2 h1, .second_section .content3 h1{
+    font-size: 30px;
+    color: orange;
+    
+}
+.second_section .content1 h2, .second_section .content2 h2, .second_section .content3 h2{
+    font-size: 20px;
+    color: orange;
+}
+.second_section .content1 p, .second_section .content2 p, .second_section .content3 p{
+    font-size: 50px;
+}
+
+@media(max-height: 769px){
+    .top_page::after{
+        clip-path: ellipse(52% 100% at 50% 80px);
+    }
+}
+/**/
+@media(max-width: 1024px) and (min-height: 769px){
+    .top_page::after{
+        clip-path: ellipse(52% 100% at 50% 135px);
+    }
+    .title1_particulier{
+        width: 22%;
+    }
+}
+@media(max-width: 834px){
+    .title1_particulier{
+        width: 27%;
+    }
+    .content1 h1, .content2 h1, .content3 h1{
+        font-size: 70px;
+    }
+    .content1 p, .content2 p, .content3 p{
+        font-size: 17px;
+    }
+    .second_section .content1 h1, .second_section .content2 h1, .second_section .content3 h1{
+        font-size: 28px;
+    }
+    .second_section .content1 h2, .second_section .content2 h2, .second_section .content3 h2{
+        font-size: 18px;
+    }
+    .second_section .content1 p, .second_section .content2 p, .second_section .content3 p{
+        font-size: 45px;
+    }
+    
+}
+@media(max-width: 573px){
+    .top_page h1{
+        padding: 0;
+    }
+    .top_page p{
+        font-size: 16px;
+    }
+}
+@media(max-width: 414px){
+    .top_page h1{
+        font-size: 30px;
+    }
+    .top_page::after{
+        clip-path: ellipse(52% 100% at 50% 94px);
+    }
+    .title1_particulier{
+        width: 43%;
+        font-size: 25px;
+    }
+    .content1 h1, .content2 h1, .content3 h1{
+        font-size: 60px;
+    }
+    .second_section .content1 h1, .second_section .content2 h1, .second_section .content3 h1{
+        font-size: 26px;
+    }
+    .second_section .content1 p, .second_section .content2 p, .second_section .content3 p{
+        font-size: 42px;
+    }
+}
+@media(max-width: 400px){
+    .top_page h1{
+        padding: 0;
+        font-size: 28px;
+    }
+    .top_page p{
+        font-size: 14px;
+    }
+}
+@media(max-width: 375px){
+    .top_page h1{
+        font-size: 27px;
+    }
+    .top_page p {
+        font-size: 17px;
+    }
+    .top_page::after{
+        clip-path: ellipse(52% 100% at 50% 85px);
+    }
+    .title1_particulier{
+        width: 46%;
+        font-size: 24px;
+    }
+
+}

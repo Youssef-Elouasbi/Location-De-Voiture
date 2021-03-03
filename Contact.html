@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style_contact.css ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <title>Contact</title>
+    <link rel="icon" href="images/logo/icon_website.png">
+</head>
+<body>
+    <div id="mobile_menu" class="remove">
+        <button class="close" id="close"><i class="fas fa-times"></i></button>
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="Authentication.html"><i class="fas fa-sign-in-alt"></i> Authentication</a></li>
+                <li><a href="Inscription.html"><i class="fas fa-user-plus"></i> Inscription</a></li>
+                <li><a href="Galerie.html"><i class="fas fa-images"></i> Galerie</a></li>
+                <li><a href="Contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <header id="header">
+        <button id="burger"><i class="fas fa-bars"></i></button>
+        <div class="menu">
+            <a href="index.html"><img id="logo_website" src="images/logo/website_logo2.png" alt=""></a>
+            <ul id="menu_website">
+                <li><a href="Authentication.html">Authentication</a></li>
+                <li><a href="Inscription.html">Inscription</a></li>
+                <li><a href="Galerie.html">Galerie</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <button id="btn_luxury"><a href="Luxe.html">Luxe <i class="fas fa-car-alt"></i></a></button>
+            </ul>
+        </div>
+    </header>
+    <main class="main_contact">
+        <div class="form" onsubmit="return doSub()">
+            <div class="form_title">
+                <h1>
+                    <i class="fas fa-envelope"></i> Contactez-Nous
+                    <!-- Message Was Sent <i class="fas fa-smile-beam"></i> -->
+                </h1>
+            </div>
+            <form action="" onsubmit="">
+                <input id="textName" type="text" placeholder="Entrez Votre Nom" pattern="[a-zA-Z]{4,}" required>
+                <input id="textEmail" type="email" placeholder="Entrez Votre Email" required>
+                <input id="textTel" type="tel" placeholder="Entrez Votre Numéro De Téléphone: 12-345-678" pattern="[0-9]{2}-[0-9]{3}-[0-9]{3}" required>
+                <textarea name="" id="" cols="53" rows="15" placeholder="Écrivez Votre Message" required></textarea>
+                <button>
+                    Envoyer <i class="far fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </main>
+    <footer>
+
+        <div class="plan">
+            <div class="plan_title1">
+                <h4>Enregistrement</h3>
+                <p><a href="Inscription.html">Inscription</a></p>
+                <p><a href="Authentication.html">Authentication</a></p>
+            </div>
+            <div class="plan_title3">
+                <h4>Type De Location</h3>
+                <p><a href="Particulier.html">Location Particulier</a></p>
+                <p><a href="Professionnelle.html"> Location Professionnelle</a></p>
+                <p><a href="Luxe.html"> Location De Luxe</a></p>
+            </div>
+            <div class="plan_title2">
+                <h4>Autre</h3>
+                <p><a href="Galerie.html">Galerie</a></p>
+                <p><a href="Contact.html">Contact</a></p>
+            </div>
+        </div>
+
+        <div class="network">
+            <p><i class="fas fa-envelope"></i> Email : AutoYoussef@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Adresse : Avenue Al Majd, Rabat</p>
+            <div class="social">
+                <p><i class="fas fa-share-alt-square"></i> Suivez Nous : </p>
+                <div class="social_img">
+                    <a href="#"><img src="images/image/facebook.png" alt=""></a>
+                    <a href="#"><img src="images/image/instagram.png" alt=""></a>
+                    <a href="#"><img src="images/image/twitter.png" alt=""></a>
+                    <a href="#"><img src="images/image/whatsapp.png" alt=""></a>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.8564004600853!2d-6.888641648892873!3d33.97053022938357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76d2f98c0576d%3A0xa854b9d82563a76!2sInstitut%20De%20Technologie%20Appliquee%20Yacoub%20El%20Mansour%20Rabat!5e0!3m2!1sen!2sma!4v1612437335655!5m2!1sen!2sma" width="500" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+
+        <div class="copyRight">
+            <div class="copy_text">
+                <p>2021&copy; By Youssef Elouasbi</p>
+            </div>
+            <div>
+                Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            </div>
+        </div>
+        
+    </footer>
+
+    <a href="#header"><button class="btnUp remove"><i class="fas fa-arrow-up"></i></button></a>
+
+    <script src="js/app.js"></script>
+    <script src="js/app_contact.js"></script>
+</body>
+</html>

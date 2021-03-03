@@ -1,0 +1,328 @@
+.containerProfess{
+    overflow: hidden;
+    width: 90%;
+    height: 41vh;
+    margin:50px auto 50px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.carCard1{
+    animation: animateCarProf 3s forwards;
+}
+.carCard2{
+    animation: animateCarProf 4s forwards;
+}
+.carCard3{
+    animation: animateCarProf 5s forwards;
+}
+.carCard4{
+    animation: animateCarProf 6s forwards;
+}
+.carCard{
+    width: 20%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    opacity: 0;
+}
+.theCard{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 500ms ease;
+}
+.theCard:hover{
+    transform: rotateY(180deg);
+}
+.frontFace{
+    position: absolute;
+    /* background-color: red; */
+    background-image: linear-gradient(to top right, #b1b1b1,rgb(240, 240, 240), rgb(240, 240, 240),#b1b1b1);
+    /* background-color: rgb(242, 242, 242); */
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgb(204, 204, 204) 0px 5px 10px ;
+}
+.frontFace h1{
+    color: white;
+}
+
+.backFace{
+    position: absolute;
+    background-color: orange;
+    
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    transform: rotateY(180deg);
+}
+.backFace img{
+    width: 90%;
+    height: 160px;
+}
+.backFace h1{
+    color: white;
+}
+.backFace p{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+.backFace button{
+    background-color: #C52519;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    width: 48%;
+    /* cursor: pointer; */
+    transition: 400ms ease;
+}
+.backFace button a{
+    color: white;
+    text-decoration: none;
+}
+.backFace button:hover{
+    background-color: white;
+}
+.backFace button:hover a{
+    Color: #C52519;
+}
+/* .frontFace{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: red;
+    backface-visibility: hidden;
+}
+.backFace{
+    position: absolute;
+    backface-visibility: hidden;
+    background-color: darkcyan;
+    border-radius: 20px;
+    transform: rotateY(180deg);
+} */
+
+.frontFace img{
+    width: 100%;
+    /* height: 200px; */
+    height: 100%;
+}
+.carCard:nth-child(2) .frontFace img{
+    width: 100%;
+    height: 90%;
+}
+
+/*maps*/
+.title2_professionnele{
+    text-align: center;
+    margin: auto;
+    border-bottom: 4px solid #C52519;
+    width: 24%;
+    border-radius: 15px;
+}
+.maps{
+    overflow: hidden;
+    width: 95%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.maps h2{
+    margin:0 0 10px 0;
+}
+.map1{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 0 10px 0;
+}
+.map2{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Costomers */
+.costomers{
+    width: 90%;
+    margin: 50px auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 35vh;
+}
+.costomer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: brown; */
+    background-image: linear-gradient(to top, orange, white);
+    box-shadow: rgb(204, 204, 204) 0px 5px 10px ;
+    text-align: center;
+    width: 30%;
+    height: 80%;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.costomer i{
+    font-size: 70px;
+    color: #C52519;
+}
+.costomer p{
+    font-size: 17px;
+}
+
+
+/*Media for responsive*/
+@media(min-height: 662px) and (max-width: 1095px){
+    .containerProfess{
+        width: 90%;
+        height: 182vh; 
+        flex-direction: column;
+        justify-content: space-between;
+        margin:20px auto 20px auto;
+    }
+    .carCard{
+        margin-bottom: 30px;
+        width: 45%;
+    }
+    .title2_professionnele{
+        width: 30%;
+    }
+}
+@media(min-height: 662px) and (max-width: 878px){
+    .title2_professionnele{
+        font-size: 29px;
+    }
+    .maps{
+        width: 100%;
+    }
+    .map1{
+        flex-direction: column;
+    }
+    .map2{
+        flex-direction: column;
+    }
+}
+@media(min-height: 662px) and (max-width: 430px){
+    .title2_professionnele{
+        font-size: 25px;
+    }
+    .maps iframe{
+        width: 95%;
+    }
+}
+@media(min-height: 662px) and (max-width: 627px){
+    .carCard{
+        width: 55%;
+    }
+    .title2_professionnele{
+        width: 54%;
+    }
+}
+
+@media(max-width: 1024px) and (min-height: 769px){
+    .containerProfess{
+        width: 90%;
+        height: 90vh; 
+        flex-direction: column;
+        justify-content: space-between;
+        margin:20px auto 20px auto;
+    }
+    .carCard{
+        margin-bottom: 30px;
+        width: 45%;
+    }
+}
+@media(max-width: 834px)and (min-height: 662px){
+    .backFace img{
+        width: 90%;
+        height: 50%;
+    }
+    .carCard:nth-child(2) .backFace img{
+        width: 80%;
+        height: 50%;
+    }
+}
+@media(max-width: 700px){
+    .costomers{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .costomer{
+        margin-bottom: 10px;
+        width: 80%;
+        height: 30%;
+    }
+}
+@media(max-width: 573px){
+    .top_page h1{
+        padding: 0;
+    }
+    .top_page p{
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 490px) and (min-height: 769px){
+    
+    /* .carCard:nth-child(2) .backFace img{
+        width: 80%;
+        height: 50%;
+    } */
+    .backFace h1{
+        color: white;
+        font-size: 25px;
+    }
+    .backFace p{
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .containerProfess{
+        height: 100vh;
+    }
+}
+@media(max-width: 400px){
+    .top_page h1{
+        padding: 0;
+        font-size: 28px;
+    }
+    .top_page p{
+        font-size: 14px;
+    }
+}
+@media(max-width: 490px) and (min-height: 769px){
+    .backFace h1{
+        font-size: 22px;
+    }
+    .containerProfess{
+        height: 110vh;
+    }
+}
+
+@keyframes animateCarProf{
+    0%{
+        opacity: 0;
+        transform: translateX(1150px);
+    }
+    100%{
+        opacity: 100;
+        transform: translateX(0px);
+    }
+}
