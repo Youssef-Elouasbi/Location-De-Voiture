@@ -141,21 +141,21 @@ topSellingDispaly();
 
 /*for desktop*/
 firstSell.addEventListener('mouseenter', function(){
-    hoverFirst.classList.add('selling_moveUp');
-    hoverFirst.classList.remove('selling_moveDown');
-});
-firstSell.addEventListener('mouseleave', function(){
-    hoverFirst.classList.remove('selling_moveUp');
-    hoverFirst.classList.add('selling_moveDown');
-});
-
-secondeSell.addEventListener('mouseenter', function(){
     hoverSeconde.classList.add('selling_moveUp');
     hoverSeconde.classList.remove('selling_moveDown');
 });
-secondeSell.addEventListener('mouseleave', function(){
+firstSell.addEventListener('mouseleave', function(){
     hoverSeconde.classList.remove('selling_moveUp');
     hoverSeconde.classList.add('selling_moveDown');
+});
+
+secondeSell.addEventListener('mouseenter', function(){
+    hoverFirst.classList.add('selling_moveUp');
+    hoverFirst.classList.remove('selling_moveDown');
+});
+secondeSell.addEventListener('mouseleave', function(){
+    hoverFirst.classList.remove('selling_moveUp');
+    hoverFirst.classList.add('selling_moveDown');
 });
 
 thirdSell.addEventListener('mouseenter', function(){
@@ -169,21 +169,22 @@ thirdSell.addEventListener('mouseleave', function(){
 
 /*for mobile*/
 firstSell.addEventListener('click', function(){
-    hoverFirst.classList.add('selling_moveUp');
-    hoverFirst.classList.remove('selling_moveDown');
-});
-firstSell.addEventListener('dblclick', function(){
-    hoverFirst.classList.remove('selling_moveUp');
-    hoverFirst.classList.add('selling_moveDown');
-});
-
-secondeSell.addEventListener('click', function(){
     hoverSeconde.classList.add('selling_moveUp');
     hoverSeconde.classList.remove('selling_moveDown');
 });
-secondeSell.addEventListener('dblclick', function(){
+firstSell.addEventListener('dblclick', function(){
     hoverSeconde.classList.remove('selling_moveUp');
     hoverSeconde.classList.add('selling_moveDown');
+});
+
+secondeSell.addEventListener('click', function(){
+    hoverFirst.classList.add('selling_moveUp');
+    hoverFirst.classList.remove('selling_moveDown');
+});
+secondeSell.addEventListener('dblclick', function(){
+    
+    hoverFirst.classList.remove('selling_moveUp');
+    hoverFirst.classList.add('selling_moveDown');
 });
 
 thirdSell.addEventListener('click', function(){
